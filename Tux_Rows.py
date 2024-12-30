@@ -1,6 +1,6 @@
 import pandas as pd # Importing the pandas library 
 import glob # Importing the glob module 
-files = glob.glob('C:/Users/username/Desktop/file folder/data file folder//*.tux') # Use glob to find all the .tux files in the specified directory
+files = glob.glob('C:/Users/username/Desktop/file folder/data file folder/file, *.tux') # Use glob to find all the .tux files in the specified directory
 dfs = [] # Initialise an empty list to store Data Frames 
 for tux in files: # Loop through each .tux file found by glob 
   temp_df = pd.read_csv(tux) # Read the .tux file into a Data Frame using pandas #
