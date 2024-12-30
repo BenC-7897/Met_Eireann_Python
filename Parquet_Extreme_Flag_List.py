@@ -1,14 +1,8 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Tue Jun 25 15:25:15 2024
-
-@author: Bzikangcrane
-"""
 # Import the Dask library for parallel computing with DataFrames
 import dask.dataframe as dd
 
 # Define the file path to the Parquet file
-file_path = r"C:/Users/bzikangcrane/Desktop/Met Eireann Data/Database_Project/camp_temp_1min_non_qc_2024.parquet"
+file_path = r"C:/Users/username/Desktop/file folder/data folder/data.parquet"
 
 # Read the Parquet file into a Dask DataFrame
 ddf = dd.read_parquet(file_path)
