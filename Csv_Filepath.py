@@ -1,44 +1,29 @@
 import os  # Importing the 'os' module to interact with the operating system
 
-# Prompt the user to input a file path
-filepath = input("Please enter the file path: ")
+filepath = input("Please enter the file path: ") # Prompt the user to input a file path
 
-# Print the entered file path for confirmation
-print(filepath)
+print(filepath) # Print the entered file path for confirmation
 
-# Check if the entered file path exists
-if os.path.exists(filepath):
+if os.path.exists(filepath): # Check if the entered file path exists
     print('The path exists')  # Inform the user that the path exists
     
-    # Check if the path is a file
-    if os.path.isfile(filepath):
-        # Split the file path to get the file extension
-        _, ext = os.path.splitext(filepath)
+    if os.path.isfile(filepath): # Check if the path is a file
+        _, ext = os.path.splitext(filepath) # Split the file path to get the file extension
         
-        # Check if the file is a .csv file
-        if ext == '.csv':
-            # Open the file in read mode with the correct encoding
-            with open(filepath, 'r', encoding='utf-8-sig') as f:
-                # Read all the lines in the file
-                lines = f.readlines()
-                # Print the contents of the file
-                print(lines)
+        if ext == '.csv': # Check if the file is a .csv file
+            with open(filepath, 'r', encoding='utf-8-sig') as f: # Open the file in read mode with the correct encoding
+                lines = f.readlines() # Read all the lines in the file
+                print(lines) # Print the contents of the file
         else:
-            # Inform the user if the file is not a .csv file
-            print('The file is not a .csv file')
+            print('The file is not a .csv file') # Inform the user if the file is not a .csv file
     
-    # Check if the path is a directory
-    elif os.path.isdir(filepath):
+    elif os.path.isdir(filepath): # Check if the path is a directory
         print('The path is a directory. Here are its .csv files:')
-        # List all files in the directory and filter for .csv files
-        for filename in os.listdir(filepath):
+        for filename in os.listdir(filepath): # List all files in the directory and filter for .csv files
             if filename.endswith('.csv'):
-                # Print the name of each .csv file in the directory
-                print(filename)
+                print(filename) # Print the name of each .csv file in the directory
     
-    # Handle the case where the path is neither a file nor a directory
-    else:
+    else: # Handle the case where the path is neither a file nor a directory
         print('The specified path does not exist')
 else:
-    # Inform the user that the path does not exist
-    print('Please provide a path.')
+    print('Please provide a path.') # Inform the user that the path does not exist
