@@ -1,9 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Wed May 29 12:23:27 2024
-
-@author: Bzikangcrane
-"""
 import os  # Importing the 'os' module to interact with the operating system
 
 # Prompt the user to input a file or directory path
